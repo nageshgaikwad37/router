@@ -1,0 +1,13 @@
+<div class="row mt-4">
+    <div class="col-sm-4">
+        <ul class="list-group">
+           <li class="list-group-item" *ngFor="let user of users" [ngClass]="{'active': user.userId === 1}">
+               {{user.userName}}
+           </li> 
+        </ul>
+
+    </div>
+    <div class="col-sm-4">
+        <app-user></app-user>
+    </div>
+</div>

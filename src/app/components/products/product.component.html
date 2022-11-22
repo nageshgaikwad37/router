@@ -1,0 +1,13 @@
+<div class="row mt-4">
+    <div class="col-sm-4">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor=" let pro of product" [ngClass]="{'active':  pro.pId === 2}">
+               {{pro.pname}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <app-edit-product></app-edit-product>
+        <app-c-product></app-c-product>
+    </div>
+</div>
