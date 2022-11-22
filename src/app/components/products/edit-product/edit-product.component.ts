@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Iproduct } from 'src/app/shared/model/data';
 import { ProductService } from 'src/app/shared/services/product.service';
 
@@ -10,10 +11,13 @@ import { ProductService } from 'src/app/shared/services/product.service';
 export class EditProductComponent implements OnInit {
   product!: Iproduct | undefined;
   productId:number=2
-  constructor(private productService:ProductService) { }
+  constructor(private productService:ProductService,
+   private router:Router) { }
 
   ngOnInit(): void {
-    this.product = this.productService.getproduct(this.productId)
+    this.product = this.productService.getproduct(this.productId) 
   }
-
+  onProductUpdt(){
+    this.router.navigate(['/product'])
+  }
 }

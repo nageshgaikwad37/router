@@ -1,7 +1,9 @@
 <div class="row mt-4">
     <div class="col-sm-4">
         <ul class="list-group">
-            <li class="list-group-item" *ngFor=" let pro of product" [ngClass]="{'active':  pro.pId === 2}">
+            <li class="list-group-item" *ngFor=" let pro of product" [ngClass]="{'active':  pro.pId === 2}" 
+           [routerLink]="['/product', pro.pId]"
+            >
                {{pro.pname}}
             </li>
         </ul>
